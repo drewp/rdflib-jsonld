@@ -4,7 +4,9 @@ try:
 except ImportError:
     import simplejson as json
 
-from rdflib.py3compat import PY3, format_doctest_out
+#from rdflib.py3compat import PY3, format_doctest_out
+PY3 = False
+format_doctest_out = lambda f: f
 
 from os import sep
 from os.path import normpath
